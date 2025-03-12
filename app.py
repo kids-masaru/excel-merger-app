@@ -9,10 +9,10 @@ import base64
 import io
 import traceback
 
-# アプリのルートディレクトリに配置した favicon2.ico を指定
+# アプリのルートディレクトリに配置した favicon.ico を指定
 st.set_page_config(
     page_title="保育料計算シート作成",
-    page_icon="favicon2.ico",  
+    page_icon="favicon.ico",  
     layout="wide"
 )
 
