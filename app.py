@@ -11,16 +11,16 @@ import io
 import traceback
 
 # アプリのタイトルとスタイルの設定
-st.set_page_config(page_title="Excelシートマージツール（マクロ対応版）", layout="wide")
+st.set_page_config(page_title="保育料計算シート作成", layout="wide")
 
 # アプリのタイトルと説明
-st.title("Excelシートマージツール（マクロ対応版）")
+st.title("保育料計算シート作成")
 st.markdown("""
-### このツールの機能
-- template.xlsm と 利用明細書 のExcelファイルを受け取ります
-- テンプレートの最初の2つのシートはそのまま保持します
-- 利用明細書の全シートをSheet1, Sheet2...という名前でテンプレートに追加します
-- マクロは保持されます（出力は.xlsm形式）
+#### 【かもめ保育園用】
+#### このツールの機能
+- template.xlsm と 利用明細書 のExcelファイルを受け取ります。
+- 利用明細書 のExcelファイルの全シートをtemplate.xlsmに貼り付けます。
+- 出力は.xlsm形式です。
 """)
 
 # ファイルのダウンロード用関数
@@ -127,15 +127,15 @@ def merge_workbooks(template_wb, data_wb):
 def main():
     st.sidebar.title("使い方")
     st.sidebar.markdown("""
-    1. template.xlsm をアップロード (.xlsm推奨)
+    1. template.xlsm をアップロード
     2. 利用明細書をアップロード
     3. 「処理開始」ボタンをクリック
     4. 処理完了後、結果ファイルをダウンロード
     
     **注意点:**
-    - テンプレートには最低2つのシートが必要です
-    - マクロは保持されます
     - 出力ファイルは.xlsm形式です
+    - ダウンロード後ファイルが正しく動作しない場合
+    - ※プロパティからセキュリティで”許可する”をチェックしてください※
     """)
     
     st.sidebar.markdown("---")
