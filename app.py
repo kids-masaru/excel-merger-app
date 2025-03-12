@@ -10,8 +10,12 @@ import base64
 import io
 import traceback
 
-# アプリのタイトルとスタイルの設定
-st.set_page_config(page_title="保育料計算シート作成", layout="wide")
+# アプリのタイトル、ファビコンとスタイルの設定
+st.set_page_config(
+    page_title="保育料計算シート作成", 
+    page_icon="calculator_icon.png",  # ファビコンの画像ファイル（ローカルファイルまたはURL）
+    layout="wide"
+)
 
 # アプリのタイトルと説明
 st.title("保育料計算シート作成")
